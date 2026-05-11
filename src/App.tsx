@@ -5,6 +5,7 @@ import AnalyticsPage from '@/pages/AnalyticsPage';
 import UsersPage from '@/pages/UsersPage';
 import SettingsPage from '@/pages/SettingsPage';
 
+
 export default function App() {
   return (
     <BrowserRouter>
