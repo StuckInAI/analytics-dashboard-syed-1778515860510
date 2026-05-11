@@ -43,7 +43,7 @@ export default function Sidebar() {
 
       <nav className={styles.nav}>
         <div className={styles.navSection}>
-          <span className={styles.navSectionLabel}>Main Menu</span>
+          <span className={styles.navSectionLabel}>TEST Menu</span>
           {navItems.map((item) => (
             <NavLink
               key={item.path}
