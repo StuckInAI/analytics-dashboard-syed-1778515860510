@@ -1,0 +1,49 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.centerNum {
+  fill: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+}
+
+.centerLabel {
+  fill: var(--color-text-muted);
+  font-size: 9px;
+  font-family: var(--font-sans);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.legendValue {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}

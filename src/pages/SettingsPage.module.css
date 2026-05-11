@@ -1,0 +1,214 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 800px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sectionTitle {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.formGroupFull {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.input {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--color-accent-blue);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.textarea {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.textarea:focus {
+  border-color: var(--color-accent-blue);
+}
+
+.toggleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.toggleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toggleLabel {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.toggleDesc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSlider {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg-hover);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.toggleSlider::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.toggle input:checked + .toggleSlider {
+  background-color: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
+}
+
+.toggle input:checked + .toggleSlider::before {
+  left: calc(100% - 18px);
+  background-color: white;
+}
+
+.dangerZone {
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dangerTitle {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-accent-red);
+}
+
+.dangerDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.dangerBtn {
+  align-self: flex-start;
+  padding: var(--space-2) var(--space-5);
+  background-color: transparent;
+  border: 1px solid var(--color-accent-red);
+  border-radius: var(--radius-md);
+  color: var(--color-accent-red);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.dangerBtn:hover {
+  background-color: var(--color-accent-red);
+  color: white;
+}
+
+.saveBtn {
+  align-self: flex-start;
+  padding: var(--space-3) var(--space-6);
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+.saveBtn:hover {
+  opacity: 0.85;
+}

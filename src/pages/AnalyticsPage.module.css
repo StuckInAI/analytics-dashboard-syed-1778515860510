@@ -1,0 +1,130 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.mainChart {
+  /* full width */
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.metricsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.metricRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.metricLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.metricBar {
+  flex: 2;
+  height: 6px;
+  background-color: var(--color-bg-hover);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.metricFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+}
+
+.metricValue {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  min-width: 40px;
+  text-align: right;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.statBox {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.statBoxLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.statBoxValue {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.statBoxChange {
+  font-size: var(--text-xs);
+  color: var(--color-accent-green);
+  margin-top: 2px;
+}
+
+.funnelList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.funnelItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.funnelHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+}
+
+.funnelLabel {
+  color: var(--color-text-secondary);
+}
+
+.funnelValue {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.funnelBar {
+  height: 8px;
+  background-color: var(--color-bg-hover);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.funnelFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
